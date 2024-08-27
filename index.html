@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/simple-lightbox@2.1.0/dist/simpleLightbox.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-lightbox@2.1.0/dist/simpleLightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -14,13 +16,13 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#biography">Biography</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button id="theme-toggle">Toggle Theme</button>
     </header>
 
     <main>
@@ -31,63 +33,26 @@
             </div>
         </section>
 
+        <section id="featured">
+            <h2>Featured Projects</h2>
+            <div id="rotating-showcase"></div>
+        </section>
+
         <section id="gallery">
             <h2>Project Gallery</h2>
             <div class="gallery-grid">
-                <a href="project1.jpg" class="gallery-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                </a>
-                <a href="project2.jpg" class="gallery-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                </a>
-                <!-- Add more gallery items as needed -->
+                <!-- Gallery items will be dynamically added here -->
             </div>
         </section>
 
-        <section id="services">
-            <h2>Services & Skills</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>Residential Design</h3>
-                    <p>Creating beautiful, functional living spaces.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Commercial Interiors</h3>
-                    <p>Designing productive and inspiring work environments.</p>
-                </div>
-                <div class="service-item">
-                    <h3>3D Visualization</h3>
-                    <p>Bringing your ideas to life with realistic renders.</p>
-                </div>
-                <!-- Add more services as needed -->
-            </div>
-        </section>
-
-        <section id="testimonials">
-            <h2>Client Testimonials</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p>"Amazing work! Transformed our space completely."</p>
-                    - John Doe
-                </div>
-                <div class="testimonial">
-                    <p>"Professional, creative, and attentive to detail."</p>
-                    - Jane Smith
-                </div>
-                <!-- Add more testimonials as needed -->
-            </div>
-        </section>
-
-        <section id="biography">
-            <h2>About Me</h2>
-            <!-- Add your biography here -->
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <canvas id="skills-chart"></canvas>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <!-- Add your contact information or a contact form here -->
+            <!-- Add your contact form here -->
         </section>
     </main>
 
