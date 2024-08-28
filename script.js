@@ -24,9 +24,9 @@ function getProjectImages(projectId) {
     // fetch the images for each project, perhaps from a database or a predefined list.
     // For now, we'll return dummy data.
     return [
-        `${projectId}-image1.jpg`,
-        `${projectId}-image2.jpg`,
-        `${projectId}-image3.jpg`
+        `project1b.jpeg`,
+        `project1c.jpeg`,
+
     ];
 }
 
