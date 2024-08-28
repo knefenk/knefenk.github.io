@@ -21,21 +21,41 @@
 
     <main>
         <section id="home">
-            <h1>Killer Bee</h1>
+            <h1>Killer bee</h1>
             <p class="tagline">Interior Designer & Spatial Storyteller</p>
         </section>
 
         <section id="projects">
             <h2>Selected Works</h2>
             <div class="project-grid">
-                <div class="project-item" onclick="openProject('Konoha Village')">
+                <div class="project-item" onclick="openProject('project1')">
                     <img src="project1.jpeg" alt="Project 1">
                     <div class="project-info">
-                        <h3>Konoha VIllage</h3>
-                        <p>Brief description</p>
+                        <h3>Modern Loft</h3>
+                        <p>Urban living redefined</p>
                     </div>
                 </div>
-                <!-- Repeat for other projects -->
+                <div class="project-item" onclick="openProject('project2')">
+                    <img src="project1a.jpeg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Rustic Retreat</h3>
+                        <p>Countryside charm</p>
+                    </div>
+                </div>
+                <div class="project-item" onclick="openProject('project3')">
+                    <img src="project1b.jpeg" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Minimalist Office</h3>
+                        <p>Productivity meets style</p>
+                    </div>
+                </div>
+                <div class="project-item" onclick="openProject('project4')">
+                    <img src="project1c.jpeg" alt="Project 4">
+                    <div class="project-info">
+                        <h3>Coastal Villa</h3>
+                        <p>Seaside luxury living</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -63,6 +83,19 @@
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-gallery">
+                <img id="modal-image" src="" alt="Project Image">
+                <button id="prev-btn">&lt;</button>
+                <button id="next-btn">&gt;</button>
+            </div>
+            <p id="modal-description"></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
