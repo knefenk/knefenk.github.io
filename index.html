@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Interior Designer</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/simple-lightbox@2.1.0/dist/simpleLightbox.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-lightbox@2.1.0/dist/simpleLightbox.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -16,43 +12,64 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#featured">Featured</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button id="theme-toggle">Toggle Theme</button>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>Transforming Spaces, Inspiring Lives</h2>
-                <p>Innovative Interior Design Solutions</p>
+        <section id="home">
+            <div class="bio-container">
+                <div class="bio-image">
+                    <img src="your-image.jpg" alt="Your Name">
+                </div>
+                <div class="bio-text">
+                    <h2>Welcome to My World of Design</h2>
+                    <p>Short biography goes here. Describe your passion for interior design, your experience, and what makes your approach unique.</p>
+                </div>
             </div>
         </section>
 
-        <section id="featured">
-            <h2>Featured Projects</h2>
-            <div id="rotating-showcase"></div>
-        </section>
-
-        <section id="gallery">
-            <h2>Project Gallery</h2>
-            <div class="gallery-grid">
-                <!-- Gallery items will be dynamically added here -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-item" onclick="openGallery('project1')">
+                    <img src="project1-main.jpg" alt="Project 1">
+                    <h3>Project 1 Name</h3>
+                </div>
+                <div class="project-item" onclick="openGallery('project2')">
+                    <img src="project2-main.jpg" alt="Project 2">
+                    <h3>Project 2 Name</h3>
+                </div>
+                <!-- Add more project items as needed -->
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills & Expertise</h2>
-            <canvas id="skills-chart"></canvas>
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p>"Amazing work! Transformed our space completely."</p>
+                    - John Doe
+                </div>
+                <div class="testimonial">
+                    <p>"Professional, creative, and attentive to detail."</p>
+                    - Jane Smith
+                </div>
+                <!-- Add more testimonials as needed -->
+            </div>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
-            <!-- Add your contact form here -->
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
 
@@ -60,7 +77,10 @@
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
 
-    <button id="back-to-top" title="Back to Top">↑</button>
+    <div id="gallery-modal" class="modal">
+        <span class="close">&times;</span>
+        <div id="gallery-content"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
