@@ -24,6 +24,93 @@
             font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
         }
+        
+        /* Profile section styles */
+        #profile {
+            background-color: #1a1a1a;
+            padding: 6rem 0;
+        }
+        
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .profile-photo-container {
+            flex: 0 0 350px;
+        }
+        
+        .profile-photo {
+            width: 350px;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border: 3px solid #bb86fc;
+            position: relative;
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .profile-photo:hover img {
+            transform: scale(1.05);
+        }
+        
+        .profile-info {
+            flex: 1;
+        }
+        
+        .profile-info h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        
+        .profile-bio {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .profile-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            margin-top: 1.5rem;
+        }
+        
+        .profile-contact .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .profile-contact .contact-item svg {
+            fill: #bb86fc;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 0 1rem;
+            }
+            
+            .profile-info h2 {
+                text-align: center;
+            }
+            
+            .profile-contact .contact-item {
+                justify-content: center;
+            }
+        }
 
         /* Header and navigation */
         header {
@@ -563,16 +650,43 @@
             <section id="home">
                 <div class="container">
                     <h1>TAN CHUN PAN</h1>
-                    <p class="tagline">I am a final-year Mechatronic Engineering student at APU, actively seeking an opportunity to enhance my
-                    path towards becoming an engineer and contribute to society. I am a tech enthusiast that is goal-driven,
-                    thrive in collaborative settings, and possess multiple technical skills. I am passionate in exploring new idea
-                    and concept.</p>
+                    <p class="tagline">Mechatronic Engineering Student | System Engineering Intern | Tech Enthusiast</p>
+                </div>
+            </section>
+
+            <section id="profile">
+                <div class="container">
+                    <div class="profile-container">
+                        <div class="profile-photo-container">
+                            <div class="profile-photo">
+                                <img src="image/profile-photo.jpg" alt="Tan Chun Pan">
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h2>About Me</h2>
+                            <p class="profile-bio">I am a final-year Mechatronic Engineering student at APU, actively seeking an opportunity to enhance my path towards becoming an engineer and contribute to society. I am a tech enthusiast that is goal-driven, thrive in collaborative settings, and possess multiple technical skills. I am passionate in exploring new ideas and concepts.</p>
+                            <div class="profile-contact">
+                                <div class="contact-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                                    <span>kneftcp123@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                    <span>+60163521234</span>
+                                </div>
+                                <div class="contact-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    <a href="https://www.linkedin.com/in/tan-chun-pan-knef-423050215/" target="_blank" style="color: #f4f4f4; text-decoration: none;">LinkedIn Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section id="resume">
                 <div class="container">
-                    <h2>About Me</h2>
+                    <h2>Resume</h2>
                     <div class="resume-container">
                         <div>
                             <div class="resume-section">
@@ -911,7 +1025,7 @@
                             <h3>Get In Touch</h3>
                             <div class="contact-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
-                                <span>24 Jalan 13/6s, 43200 Cheras</span>
+                                <span>24 Jalan Permaisuri 13/6, Bandar Mahkota Cheras, 43200 Cheras</span>
                             </div>
                             <div class="contact-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -919,7 +1033,7 @@
                             </div>
                             <div class="contact-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                                <span>+601634</span>
+                                <span>+60163521234</span>
                             </div>
                             <div class="contact-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
