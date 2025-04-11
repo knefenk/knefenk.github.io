@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Killer Bee - Engineering E-Portfolio</title>
+    <title>Tan Chun Pan - Engineering E-Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /* Base styles */
@@ -88,14 +88,14 @@
         }
 
         p {
-            margin-bottom: 1.5rem;
-            max-width: 800px;
+            margin-bottom: 1rem;
         }
 
         /* Home section */
         #home {
             text-align: center;
-            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('/api/placeholder/1200/800') center/cover no-repeat;
+            background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('/api/placeholder/1200/800') center/cover no-repeat;
+            height: 100vh;
         }
 
         #home h1 {
@@ -106,12 +106,126 @@
         .tagline {
             font-size: 1.2rem;
             font-weight: 300;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        /* Resume section */
+        .resume-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+
+        .resume-section h3 {
+            color: #bb86fc;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .resume-skill-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .resume-skill {
+            background-color: #1e1e1e;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+
+        .resume-skill:before {
+            content: "•";
+            color: #bb86fc;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            border-left: 3px solid #bb86fc;
+        }
+
+        .experience-item h4 {
+            color: #f4f4f4;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .experience-item .position {
+            color: #bb86fc;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item .date {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Portfolio section */
+        #portfolio {
+            background-color: #0d0d0d;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            color: #bb86fc;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
         /* PLO Section */
         #plo {
-            display: block;
-            padding: 6rem 2rem;
+            background-color: #0d0d0d;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            min-height: auto;
         }
 
         .plo-table {
@@ -226,8 +340,10 @@
 
         /* SWOT Analysis */
         #swot {
-            display: block;
-            padding: 6rem 2rem;
+            background-color: #0d0d0d;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            min-height: auto;
         }
 
         .swot-container {
@@ -285,78 +401,47 @@
             color: #bb86fc;
         }
 
-        /* About section */
-        #about {
-            display: block;
-            padding: 6rem 2rem;
+        /* Contact section */
+        #contact {
+            background-color: #0d0d0d;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
         }
 
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .contact-info {
             background-color: #1e1e1e;
-            padding: 3rem;
+            padding: 2rem;
             border-radius: 8px;
         }
 
-        .about-content img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #bb86fc;
-        }
-
-        .about-text h3 {
+        .contact-info h3 {
             color: #bb86fc;
-            font-size: 2rem;
             margin-bottom: 1.5rem;
-        }
-
-        /* Conclusion */
-        #conclusion {
-            display: block;
-            padding: 6rem 2rem;
-        }
-
-        .conclusion {
-            background-color: #1e1e1e;
-            padding: 3rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            border-left: 5px solid #bb86fc;
-        }
-
-        .conclusion h3 {
-            color: #bb86fc;
-            margin: 1.5rem 0;
             font-size: 1.5rem;
         }
 
-        .conclusion ol {
-            padding-left: 1.5rem;
-            margin: 1.5rem 0;
+        .contact-item {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
         }
 
-        .conclusion ol li {
-            margin-bottom: 0.8rem;
-        }
-
-        /* Contact section */
-        #contact {
-            display: block;
-            padding: 6rem 2rem;
+        .contact-item svg {
+            margin-right: 1rem;
+            fill: #bb86fc;
         }
 
         form {
             display: grid;
             gap: 1rem;
             width: 100%;
-            max-width: 500px;
-            margin: 2rem auto 0;
         }
 
         input, textarea {
@@ -388,34 +473,30 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 1.5rem;
+            padding: 2rem;
             background-color: #1e1e1e;
-            margin-top: 2rem;
         }
 
-        /* Responsive adjustments */
+        /* Responsive */
         @media (max-width: 768px) {
+            .resume-container {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
             .swot-container {
                 grid-template-columns: 1fr;
             }
 
-            .about-content {
-                flex-direction: column;
-                text-align: center;
-                padding: 2rem;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
 
             #home h1 {
                 font-size: 3rem;
-            }
-
-            .chart-container {
-                padding: 1rem;
-                height: 350px;
-            }
-
-            .bar {
-                margin: 0 3px;
             }
 
             nav ul {
@@ -426,333 +507,496 @@
                 margin: 0.5rem;
             }
         }
+
+        /* Page transitions */
+        .page {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Conclusion */
+        .conclusion {
+            background-color: #1e1e1e;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            border-left: 3px solid #bb86fc;
+        }
+
+        .conclusion h3 {
+            color: #bb86fc;
+            margin-bottom: 1.5rem;
+        }
+
+        .conclusion ol {
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .conclusion ol li {
+            margin-bottom: 0.8rem;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#plo">PLO Assessment</a></li>
-                <li><a href="#swot">SWOT Analysis</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#conclusion">Conclusion</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" onclick="showPage('home-page')">Home</a></li>
+                <li><a href="#" onclick="showPage('portfolio-page')">Portfolio</a></li>
+                <li><a href="#" onclick="showPage('plo-page')">PLO Assessment</a></li>
+                <li><a href="#" onclick="showPage('swot-page')">SWOT Analysis</a></li>
+                <li><a href="#" onclick="showPage('contact-page')">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h1>Killer Bee</h1>
-            <p class="tagline">Engineering Professional & Problem Solver</p>
-        </section>
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <section id="home">
+                <div class="container">
+                    <h1>TAN CHUN PAN</h1>
+                    <p class="tagline">I am a final-year Mechatronic Engineering student at APU, actively seeking an opportunity to enhance my
+                    path towards becoming an engineer and contribute to society. I am a tech enthusiast that is goal-driven,
+                    thrive in collaborative settings, and possess multiple technical skills. I am passionate in exploring new idea
+                    and concept.</p>
+                </div>
+            </section>
 
-        <section id="plo">
-            <div class="container">
-                <h2>Program Learning Outcomes Assessment</h2>
-                <p>
-                    The table below shows my performance against each of the 12 Program Learning Outcomes (PLOs)
-                    of my engineering program, with scores ranging from 0 to 1 (where 1 represents full achievement).
-                </p>
+            <section id="resume">
+                <div class="container">
+                    <h2>About Me</h2>
+                    <div class="resume-container">
+                        <div>
+                            <div class="resume-section">
+                                <h3>Skills</h3>
+                                <div class="resume-skill-grid">
+                                    <div class="resume-skill">Python</div>
+                                    <div class="resume-skill">SolidWorks</div>
+                                    <div class="resume-skill">ROS2</div>
+                                    <div class="resume-skill">LTSpice</div>
+                                    <div class="resume-skill">MATLAB</div>
+                                </div>
+                            </div>
 
-                <table class="plo-table">
-                    <thead>
-                        <tr>
-                            <th>PLO</th>
-                            <th>Description</th>
-                            <th>Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>PLO1</td>
-                            <td>Ability to gain and apply principles of Mathematics, Science and Engineering to the solutions of complex engineering problems.</td>
-                            <td class="score high-score">1.00</td>
-                        </tr>
-                        <tr>
-                            <td>PLO2</td>
-                            <td>Ability to undertake complex engineering problem analysis and apply engineering principles to solve them.</td>
-                            <td class="score medium-score">0.71</td>
-                        </tr>
-                        <tr>
-                            <td>PLO3</td>
-                            <td>Ability to design innovative solutions for complex engineering problems.</td>
-                            <td class="score high-score">1.00</td>
-                        </tr>
-                        <tr>
-                            <td>PLO4</td>
-                            <td>Ability to investigate complex engineering problems using research techniques.</td>
-                            <td class="score medium-score">0.75</td>
-                        </tr>
-                        <tr>
-                            <td>PLO5</td>
-                            <td>Ability to select and use suitable tools and techniques for complex engineering problems.</td>
-                            <td class="score medium-score">0.80</td>
-                        </tr>
-                        <tr>
-                            <td>PLO6</td>
-                            <td>Ability to engage in professional engineering practice for safety, health, social, cultural and legal responsibilities in developing solutions for complex engineering problems.</td>
-                            <td class="score high-score">1.00</td>
-                        </tr>
-                        <tr>
-                            <td>PLO7</td>
-                            <td>Ability to comprehend and demonstrate good practices of engineering in sustainable development and environmental considerations for the solutions of complex engineering problems.</td>
-                            <td class="score high-score">1.00</td>
-                        </tr>
-                        <tr>
-                            <td>PLO8</td>
-                            <td>Ability to execute the responsibilities of an Engineer professionally and ethically.</td>
-                            <td class="score high-score">1.00</td>
-                        </tr>
-                        <tr>
-                            <td>PLO9</td>
-                            <td>Ability to function effectively as a team leader or a member in a team within multi-disciplinary settings.</td>
-                            <td class="score high-score">1.00</td>
-                        </tr>
-                        <tr>
-                            <td>PLO10</td>
-                            <td>Ability to communicate effectively and professionally on complex engineering activities.</td>
-                            <td class="score high-score">1.00</td>
-                        </tr>
-                        <tr>
-                            <td>PLO11</td>
-                            <td>Ability to demonstrate entrepreneurship skills, engineering project management and economic decision making in multidisciplinary environments.</td>
-                            <td class="score high-score">1.00</td>
-                        </tr>
-                        <tr>
-                            <td>PLO12</td>
-                            <td>Ability to recognise the need for, and be able to engage in independent and life-long learning towards continuous professional development.</td>
-                            <td class="score high-score">1.00</td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <div class="resume-section">
+                                <h3>Language</h3>
+                                <div class="resume-skill-grid">
+                                    <div class="resume-skill">English</div>
+                                    <div class="resume-skill">Mandarin</div>
+                                    <div class="resume-skill">Malay</div>
+                                </div>
+                            </div>
 
-                <div class="chart-container">
-                    <h3>PLO Performance Visualization</h3>
-                    <div class="chart">
-                        <div class="bar" style="height: 100%;">
-                            <div class="bar-value">1.00</div>
-                            <div class="bar-label">PLO1</div>
+                            <div class="resume-section">
+                                <h3>Expertise</h3>
+                                <div class="resume-skill-grid">
+                                    <div class="resume-skill">Leadership</div>
+                                    <div class="resume-skill">Direct</div>
+                                    <div class="resume-skill">Focused</div>
+                                    <div class="resume-skill">Creativity</div>
+                                </div>
+                            </div>
+
+                            <div class="resume-section">
+                                <h3>Education & Certifications</h3>
+                                <div class="experience-item">
+                                    <h4>Bachelor's Degree in Mechatronic Engineering</h4>
+                                    <div class="position">Asia Pacific University and Innovation and Technology</div>
+                                </div>
+                                <div class="experience-item">
+                                    <h4>Science Stream + Accounting</h4>
+                                    <div class="position">SPM 9As</div>
+                                    <div class="position">SMJK Yu Hua Kajang</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bar" style="height: 71%;">
-                            <div class="bar-value">0.71</div>
-                            <div class="bar-label">PLO2</div>
-                        </div>
-                        <div class="bar" style="height: 100%;">
-                            <div class="bar-value">1.00</div>
-                            <div class="bar-label">PLO3</div>
-                        </div>
-                        <div class="bar" style="height: 75%;">
-                            <div class="bar-value">0.75</div>
-                            <div class="bar-label">PLO4</div>
-                        </div>
-                        <div class="bar" style="height: 80%;">
-                            <div class="bar-value">0.80</div>
-                            <div class="bar-label">PLO5</div>
-                        </div>
-                        <div class="bar" style="height: 100%;">
-                            <div class="bar-value">1.00</div>
-                            <div class="bar-label">PLO6</div>
-                        </div>
-                        <div class="bar" style="height: 100%;">
-                            <div class="bar-value">1.00</div>
-                            <div class="bar-label">PLO7</div>
-                        </div>
-                        <div class="bar" style="height: 100%;">
-                            <div class="bar-value">1.00</div>
-                            <div class="bar-label">PLO8</div>
-                        </div>
-                        <div class="bar" style="height: 100%;">
-                            <div class="bar-value">1.00</div>
-                            <div class="bar-label">PLO9</div>
-                        </div>
-                        <div class="bar" style="height: 100%;">
-                            <div class="bar-value">1.00</div>
-                            <div class="bar-label">PLO10</div>
-                        </div>
-                        <div class="bar" style="height: 100%;">
-                            <div class="bar-value">1.00</div>
-                            <div class="bar-label">PLO11</div>
-                        </div>
-                        <div class="bar" style="height: 100%;">
-                            <div class="bar-value">1.00</div>
-                            <div class="bar-label">PLO12</div>
+
+                        <div>
+                            <div class="resume-section">
+                                <h3>Experience</h3>
+                                <div class="experience-item">
+                                    <h4>Signify Malaysia (formerly known as Philips Lighting)</h4>
+                                    <div class="position">System Engineering Intern</div>
+                                    <div class="date">March 2024 - June 2024</div>
+                                    <p>Hands-on experience with lighting system commissioning and troubleshooting, focusing on projects like
+                                    Interact Hospitality and NatureConnect. I collaborated with engineers and subcontractors to ensure smooth
+                                    project execution, performing on-site tasks such as testing and configuring systems for client presentations.
+                                    Additionally, I assisted in technical demonstrations and system installations at multiple sites, gaining valuable
+                                    insights into project coordination, technical problem-solving, and workflow management. This experience
+                                    strengthened my technical knowledge and enhanced my communication skills in a professional environment.</p>
+                                </div>
+
+                                <div class="experience-item">
+                                    <h4>APU Blockchain & Cryptocurrency Club</h4>
+                                    <div class="position">Event Volunteer</div>
+                                    <div class="date">June 2022- April 2023</div>
+                                    <p>I volunteered as an event crew member for my university's Blockchain Club, where I took on various
+                                    responsibilities to support our club's objectives. This included managing our booth during events, where I
+                                    handled merchandise sales and participants registration.</p>
+                                </div>
+                            </div>
+
+                            <div class="resume-section">
+                                <h3>Reference</h3>
+                                <div class="experience-item">
+                                    <h4>Ir. Dr. Lawrence Soon Kian Lun</h4>
+                                    <div class="position">Senior lecturer, Asia Pacific University</div>
+                                    <p>lawrence.soon@apu.edu.my</p>
+                                    <p>Phone: 017-536-8289</p>
+                                    <p>Email: soonkianlun@apu.edu.my</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="swot">
-            <div class="container">
-                <h2>SWOT Analysis</h2>
-                <p>
-                    Based on my PLO assessment scores, I have conducted a SWOT analysis to identify my strengths, 
-                    weaknesses, opportunities, and threats as an engineering professional.
-                </p>
+        <!-- Portfolio Page -->
+        <div id="portfolio-page" class="page">
+            <section id="portfolio">
+                <div class="container">
+                    <h2>My Portfolio</h2>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <img src="/api/placeholder/600/400" alt="PalmVision V1">
+                            <div class="portfolio-content">
+                                <h3>PalmVision V1</h3>
+                                <p>A collaborative robotics project with Katapult Asia, MRANTI and industry mentors, aimed at automating data collection and assistive transport in palm oil fields. Designed for ripeness analysis and yield optimization, it features 4WD skid steering, modular mounting, and an Intel NUC-powered navigation system.</p>
+                                <p>As the Data Collection Lead, I developed scripts to utilize mapping results for efficient video data acquisition, ensuring accurate metadata storage for ripeness analysis and yield prediction. I also designed navigation algorithms to optimize tree scanning and data logging.</p>
+                            </div>
+                        </div>
 
-                <div class="swot-container">
-                    <div class="swot-box strengths">
-                        <h3>Strengths</h3>
-                        <ul>
-                            <li><strong>Strong Fundamental Knowledge (PLO1):</strong> Perfect score in applying principles of Mathematics, Science and Engineering to solve complex problems.</li>
-                            <li><strong>Innovative Solutions (PLO3):</strong> Excellent ability to design innovative solutions for complex engineering problems.</li>
-                            <li><strong>Professional Practice (PLO6):</strong> Strong understanding of safety, health, social, cultural, and legal responsibilities in engineering practice.</li>
-                            <li><strong>Sustainability Consciousness (PLO7):</strong> Excellent grasp of sustainable development and environmental considerations in engineering solutions.</li>
-                            <li><strong>Professional Ethics (PLO8):</strong> Strong ability to execute responsibilities professionally and ethically.</li>
-                            <li><strong>Teamwork (PLO9):</strong> Excellent ability to function effectively in teams and multi-disciplinary settings.</li>
-                            <li><strong>Communication Skills (PLO10):</strong> Strong ability to communicate effectively and professionally.</li>
-                            <li><strong>Entrepreneurship & Management (PLO11):</strong> Excellent project management and economic decision-making abilities.</li>
-                            <li><strong>Lifelong Learning (PLO12):</strong> Strong commitment to continuous professional development.</li>
-                        </ul>
-                    </div>
-
-                    <div class="swot-box weaknesses">
-                        <h3>Weaknesses</h3>
-                        <ul>
-                            <li><strong>Problem Analysis (PLO2):</strong> Lower score (0.71) in undertaking complex engineering problem analysis.</li>
-                            <li><strong>Research Skills (PLO4):</strong> Room for improvement (0.75) in investigating problems using research techniques.</li>
-                            <li><strong>Technical Tools (PLO5):</strong> Need for growth (0.80) in selecting and using suitable tools and techniques.</li>
-                        </ul>
-                    </div>
-
-                    <div class="swot-box opportunities">
-                        <h3>Opportunities</h3>
-                        <ul>
-                            <li><strong>Advanced Problem Analysis:</strong> Enhancing analytical skills through specialized courses or workshops in engineering problem analysis methodologies.</li>
-                            <li><strong>Research Experience:</strong> Engaging in research projects or internships to strengthen investigative skills and research techniques.</li>
-                            <li><strong>Technical Proficiency:</strong> Learning new engineering tools and software to broaden technical capabilities and efficiency in problem-solving.</li>
-                            <li><strong>Interdisciplinary Collaboration:</strong> Leveraging strong teamwork and communication skills to engage in cross-disciplinary projects.</li>
-                            <li><strong>Innovation Leadership:</strong> Utilizing strengths in innovation (PLO3) combined with entrepreneurship skills (PLO11) to lead innovative engineering initiatives.</li>
-                        </ul>
-                    </div>
-
-                    <div class="swot-box threats">
-                        <h3>Threats</h3>
-                        <ul>
-                            <li><strong>Analytical Challenges:</strong> Complex problems requiring advanced analytical skills might be challenging due to weaknesses in PLO2.</li>
-                            <li><strong>Research-Heavy Projects:</strong> Projects demanding extensive research methodology knowledge might present obstacles due to limitations in PLO4.</li>
-                            <li><strong>Technological Evolution:</strong> Rapid changes in engineering tools and techniques could widen the gap in technical proficiency (PLO5).</li>
-                            <li><strong>Competitive Job Market:</strong> Engineers with stronger analytical and research skills may have competitive advantages in specialized positions.</li>
-                        </ul>
+                        <div class="portfolio-item">
+                            <img src="/api/placeholder/600/400" alt="Automated Pill Dispenser">
+                            <div class="portfolio-content">
+                                <h3>Automated Pill Dispenser System</h3>
+                                <p>Designed and developed a healthcare automation system for medication management. Ensured accurate dispensing, inventory monitoring, and quality control for optimal drug storage. Integrated security measures for patient identification and data protection.</p>
+                                <p>I contributed to the security management system, integrating an ESP32-CAM-based surveillance module with remote pan-and-tilt functionality for real-time monitoring. Designed a motion-triggered anti-theft system using an accelerometer to detect unauthorized movement, activating a high-decibel alarm.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <img src="/api/placeholder/400/400" alt="Killer Bee">
-                    <div class="about-text">
-                        <h3>Killer Bee</h3>
-                        <p>
-                            Not the bee that cannot fly, they call'em Kobee. I am a dedicated engineering professional with a passion for innovative solutions and sustainable development.
-                        </p>
-                        <p>
-                            With excellent performance in 9 out of 12 program learning outcomes, I bring a strong foundation in engineering principles, professional ethics, teamwork, and communication to every project I undertake.
-                        </p>
-                        <p>
-                            My philosophy combines technical expertise with a human-centered approach to problem-solving. I believe that the best engineering solutions are those that consider not just technical requirements, but also social, cultural, and environmental impacts.
-                        </p>
-                        <p>
-                            Currently focused on improving my analytical skills, research techniques, and proficiency with technical tools to become a more well-rounded engineer capable of addressing increasingly complex challenges in the field.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="conclusion">
-            <div class="container">
-                <h2>Conclusion & Development Plan</h2>
-                <div class="conclusion">
-                    <h3>Summary of Findings</h3>
+        <!-- PLO Assessment Page -->
+        <div id="plo-page" class="page">
+            <section id="plo">
+                <div class="container">
+                    <h2>Program Learning Outcomes Assessment</h2>
                     <p>
-                        My PLO assessment reveals a strong engineering foundation with exceptional performance in 9 out of 12 program outcomes. 
-                        I demonstrate excellence in applying fundamental engineering principles, designing innovative solutions, professional practice, 
-                        sustainability awareness, ethics, teamwork, communication, project management, and commitment to lifelong learning.
+                        The table below shows my performance against each of the 12 Program Learning Outcomes (PLOs)
+                        of my engineering program, with scores ranging from 0 to 1 (where 1 represents full achievement).
                     </p>
-                    <p>
-                        However, there are three areas requiring further development: complex problem analysis (PLO2), research techniques (PLO4), 
-                        and technical tool proficiency (PLO5). These areas represent critical skills for advanced engineering practice and should be 
-                        the focus of my professional development efforts.
-                    </p>
-                    <h3>Development Plan</h3>
-                    <ol>
-                        <li>Enroll in advanced courses or workshops focused on engineering analysis methodologies and critical thinking.</li>
-                        <li>Seek research opportunities or projects that require systematic investigation and application of research methods.</li>
-                        <li>Dedicate time to learning and mastering additional engineering tools and software through certified training programs.</li>
-                        <li>Pursue mentorship from experienced engineers who excel in analytical and research-oriented engineering work.</li>
-                    </ol>
-                    <p>
-                        By capitalizing on my numerous strengths while strategically addressing the identified weaknesses, 
-                        I can develop into a more well-rounded engineer with comprehensive capabilities across all program learning outcomes. 
-                        This balanced approach will enhance my professional versatility and prepare me for increasingly complex engineering challenges 
-                        throughout my career.
-                    </p>
-                </div>
-            </div>
-        </section>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Get in Touch</h2>
-                <form>
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
+                    <table class="plo-table">
+                        <thead>
+                            <tr>
+                                <th>PLO</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PLO1</td>
+                                <td class="score high-score">1.00</td>
+                            </tr>
+                            <tr>
+                                <td>PLO2</td>
+                                <td class="score medium-score">0.71</td>
+                            </tr>
+                            <tr>
+                                <td>PLO3</td>
+                                <td class="score high-score">1.00</td>
+                            </tr>
+                            <tr>
+                                <td>PLO4</td>
+                                <td class="score medium-score">0.75</td>
+                            </tr>
+                            <tr>
+                                <td>PLO5</td>
+                                <td class="score medium-score">0.80</td>
+                            </tr>
+                            <tr>
+                                <td>PLO6</td>
+                                <td class="score high-score">1.00</td>
+                            </tr>
+                            <tr>
+                                <td>PLO7</td>
+                                <td class="score high-score">1.00</td>
+                            </tr>
+                            <tr>
+                                <td>PLO8</td>
+                                <td class="score high-score">1.00</td>
+                            </tr>
+                            <tr>
+                                <td>PLO9</td>
+                                <td class="score high-score">1.00</td>
+                            </tr>
+                            <tr>
+                                <td>PLO10</td>
+                                <td class="score high-score">1.00</td>
+                            </tr>
+                            <tr>
+                                <td>PLO11</td>
+                                <td class="score high-score">1.00</td>
+                            </tr>
+                            <tr>
+                                <td>PLO12</td>
+                                <td class="score high-score">1.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="chart-container">
+                        <h3>PLO Performance Visualization</h3>
+                        <div class="chart">
+                            <div class="bar" style="height: 100%;">
+                                <div class="bar-value">1.00</div>
+                                <div class="bar-label">PLO1</div>
+                            </div>
+                            <div class="bar" style="height: 71%;">
+                                <div class="bar-value">0.71</div>
+                                <div class="bar-label">PLO2</div>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <div class="bar-value">1.00</div>
+                                <div class="bar-label">PLO3</div>
+                            </div>
+                            <div class="bar" style="height: 75%;">
+                                <div class="bar-value">0.75</div>
+                                <div class="bar-label">PLO4</div>
+                            </div>
+                            <div class="bar" style="height: 80%;">
+                                <div class="bar-value">0.80</div>
+                                <div class="bar-label">PLO5</div>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <div class="bar-value">1.00</div>
+                                <div class="bar-label">PLO6</div>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <div class="bar-value">1.00</div>
+                                <div class="bar-label">PLO7</div>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <div class="bar-value">1.00</div>
+                                <div class="bar-label">PLO8</div>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <div class="bar-value">1.00</div>
+                                <div class="bar-label">PLO9</div>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <div class="bar-value">1.00</div>
+                                <div class="bar-label">PLO10</div>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <div class="bar-value">1.00</div>
+                                <div class="bar-label">PLO11</div>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <div class="bar-value">1.00</div>
+                                <div class="bar-label">PLO12</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SWOT Analysis Page -->
+        <div id="swot-page" class="page">
+            <section id="swot">
+                <div class="container">
+                    <h2>SWOT Analysis</h2>
+                    <p>
+                        Based on my PLO assessment scores, I have conducted a SWOT analysis to identify my strengths, 
+                        weaknesses, opportunities, and threats as an engineering professional.
+                    </p>
+
+                    <div class="swot-container">
+                        <div class="swot-box strengths">
+                            <h3>Strengths</h3>
+                            <ul>
+                                <li><strong>Strong Fundamental Knowledge (PLO1):</strong> Perfect score in applying principles of Mathematics, Science and Engineering to solve complex problems.</li>
+                                <li><strong>Innovative Solutions (PLO3):</strong> Excellent ability to design innovative solutions for complex engineering problems.</li>
+                                <li><strong>Professional Practice (PLO6):</strong> Strong understanding of safety, health, social, cultural, and legal responsibilities in engineering practice.</li>
+                                <li><strong>Sustainability Consciousness (PLO7):</strong> Excellent grasp of sustainable development and environmental considerations in engineering solutions.</li>
+                                <li><strong>Professional Ethics (PLO8):</strong> Strong ability to execute responsibilities professionally and ethically.</li>
+                                <li><strong>Teamwork (PLO9):</strong> Excellent ability to function effectively in teams and multi-disciplinary settings.</li>
+                                <li><strong>Communication Skills (PLO10):</strong> Strong ability to communicate effectively and professionally.</li>
+                                <li><strong>Entrepreneurship & Management (PLO11):</strong> Excellent project management and economic decision-making abilities.</li>
+                                <li><strong>Lifelong Learning (PLO12):</strong> Strong commitment to continuous professional development.</li>
+                            </ul>
+                        </div>
+
+                        <div class="swot-box weaknesses">
+                            <h3>Weaknesses</h3>
+                            <ul>
+                                <li><strong>Problem Analysis (PLO2):</strong> Lower score (0.71) in undertaking complex engineering problem analysis.</li>
+                                <li><strong>Research Skills (PLO4):</strong> Room for improvement (0.75) in investigating problems using research techniques.</li>
+                                <li><strong>Technical Tools (PLO5):</strong> Need for growth (0.80) in selecting and using suitable tools and techniques.</li>
+                            </ul>
+                        </div>
+
+                        <div class="swot-box opportunities">
+                            <h3>Opportunities</h3>
+                            <ul>
+                                <li><strong>Advanced Problem Analysis:</strong> Enhancing analytical skills through specialized courses or workshops in engineering problem analysis methodologies.</li>
+                                <li><strong>Research Experience:</strong> Engaging in research projects or internships to strengthen investigative skills and research techniques.</li>
+                                <li><strong>Technical Proficiency:</strong> Learning new engineering tools and software to broaden technical capabilities and efficiency in problem-solving.</li>
+                                <li><strong>Interdisciplinary Collaboration:</strong> Leveraging strong teamwork and communication skills to engage in cross-disciplinary projects.</li>
+                                <li><strong>Innovation Leadership:</strong> Utilizing strengths in innovation (PLO3) combined with entrepreneurship skills (PLO11) to lead innovative engineering initiatives.</li>
+                            </ul>
+                        </div>
+
+                        <div class="swot-box threats">
+                            <h3>Threats</h3>
+                            <ul>
+                                <li><strong>Analytical Challenges:</strong> Complex problems requiring advanced analytical skills might be challenging due to weaknesses in PLO2.</li>
+                                <li><strong>Research-Heavy Projects:</strong> Projects demanding extensive research methodology knowledge might present obstacles due to limitations in PLO4.</li>
+                                <li><strong>Technological Evolution:</strong> Rapid changes in engineering tools and techniques could widen the gap in technical proficiency (PLO5).</li>
+                                <li><strong>Competitive Job Market:</strong> Engineers with stronger analytical and research skills may have competitive advantages in specialized positions.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="conclusion">
+                        <h3>Conclusion & Development Plan</h3>
+                        <p>
+                            My PLO assessment reveals a strong engineering foundation with exceptional performance in 9 out of 12 program outcomes. 
+                            I demonstrate excellence in applying fundamental engineering principles, designing innovative solutions, professional practice, 
+                            sustainability awareness, ethics, teamwork, communication, project management, and commitment to lifelong learning.
+                        </p>
+                        <p>
+                            However, there are three areas requiring further development: complex problem analysis (PLO2), research techniques (PLO4), 
+                            and technical tool proficiency (PLO5). These areas represent critical skills for advanced engineering practice and should be 
+                            the focus of my professional development efforts.
+                        </p>
+                        <h3>Development Plan</h3>
+                        <ol>
+                            <li>Enroll in advanced courses or workshops focused on engineering analysis methodologies and critical thinking.</li>
+                            <li>Seek research opportunities or projects that require systematic investigation and application of research methods.</li>
+                            <li>Dedicate time to learning and mastering additional engineering tools and software through certified training programs.</li>
+                            <li>Pursue mentorship from experienced engineers who excel in analytical and research-oriented engineering work.</li>
+                        </ol>
+                        <p>
+                            By capitalizing on my numerous strengths while strategically addressing the identified weaknesses, 
+                            I can develop into a more well-rounded engineer with comprehensive capabilities across all program learning outcomes. 
+                            This balanced approach will enhance my professional versatility and prepare me for increasingly complex engineering challenges 
+                            throughout my career.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page">
+            <section id="contact">
+                <div class="container">
+                    <h2>Contact Me</h2>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h3>Get In Touch</h3>
+                            <div class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                                <span>24 Jalan 13/6s, 43200 Cheras</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                                <span>kneftcp123@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <span>+601634</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <a href="https://www.linkedin.com/in/tan-chun-pan-knef-423050215/" target="_blank" style="color: #f4f4f4; text-decoration: none;">LinkedIn Profile</a>
+                            </div>
+                        </div>
+
+                        <form>
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <input type="text" placeholder="Subject">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Killer Bee. All rights reserved.</p>
+        <p>&copy; 2025 Tan Chun Pan. All rights reserved.</p>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+        // Page navigation
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
             });
-        });
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top when changing pages
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            // If showing PLO page, trigger chart animation
+            if (pageId === 'plo-page') {
+                setTimeout(animateBars, 500);
+            }
+        }
 
-        // Animate bars on scroll
+        // Animate bars on PLO chart
         function animateBars() {
             const bars = document.querySelectorAll('.bar');
-            const chartPosition = document.querySelector('.chart-container').getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            
-            if (chartPosition < screenPosition) {
-                bars.forEach((bar, index) => {
-                    setTimeout(() => {
-                        bar.classList.add('animate');
-                    }, 100 * index);
-                });
-            }
+            bars.forEach((bar, index) => {
+                setTimeout(() => {
+                    bar.classList.add('animate');
+                }, 100 * index);
+            });
         }
 
         // Check if elements are in view on scroll
         window.addEventListener('scroll', function() {
-            animateBars();
+            const chartContainer = document.querySelector('.chart-container');
+            if (chartContainer && isInViewport(chartContainer)) {
+                animateBars();
+            }
         });
 
-        // Initial check on page load
+        // Helper function to check if element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+
+        // Initial animation on page load if PLO page is active
         window.addEventListener('load', function() {
-            animateBars();
+            if (document.getElementById('plo-page').classList.contains('active')) {
+                animateBars();
+            }
         });
     </script>
 </body>
